@@ -1,7 +1,6 @@
 import java.util.Random;
-import java.util.concurrent.*;
 
-public class Philosopher implements Runnable {
+public class BothForksPhilosopher implements Runnable {
     Random random = new Random();
     int randomSleep = random.nextInt(2000 - 1000 + 1) + 1000;
     boolean[] forks;
@@ -10,7 +9,7 @@ public class Philosopher implements Runnable {
     int fork2Index;
     final Object monitor;
 
-    public Philosopher(String name, boolean[] forks, int fork1Index, int fork2Index, Object monitor) {
+    public BothForksPhilosopher(String name, boolean[] forks, int fork1Index, int fork2Index, Object monitor) {
         this.name = name;
         this.forks = forks;
         this.fork1Index = fork1Index;
